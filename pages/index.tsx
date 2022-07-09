@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import Layout from '../components/Layout';
+
 import heroImage from '../images/image-mockups.png';
+import mobileBackground from '../images/bg-intro-mobile.svg';
 import onlineBankingIcon from '../images/icon-online.svg';
 import budgetingIcon from '../images/icon-budgeting.svg';
 import onboardingIcon from '../images/icon-onboarding.svg';
@@ -10,113 +11,199 @@ import currencyImg from '../images/image-currency.jpg';
 import restaurantImg from '../images/image-restaurant.jpg';
 import planeImg from '../images/image-plane.jpg';
 import confettiImg from '../images/image-confetti.jpg';
+import desktopBackground from '../images/bg-intro-desktop.svg';
 
 const Home: NextPage = () => {
   return (
     <>
-      <section>
-        <div>
-          <h1 className='text-teal-500'> Next generation digital banking</h1>
-          <p>
-            Take your financial life online. Your Easybank account will be a
-            one-stop-shop for spending, saving, budgeting, investing, and much
-            more.
-          </p>
-          <button>Request Invite</button>
-        </div>
-        <div>
-          <Image
-            src={heroImage}
-            alt='Screen shots of easy bankig app showing the splash screen and account page'
-            priority
-          />
-        </div>
-      </section>
-      <section>
-        <h2>Why choose Easybank?</h2>
-        <p>
-          We leverage Open Banking to turn your bank account into your financial
-          hub. Control your finances like never before.
-        </p>
-        <div>
-          <div>
-            <Image src={onlineBankingIcon} alt='' />
-            <h3>Online Banking</h3>
-            <p>
-              Our modern web and mobile applications allow you to keep track of
-              your finances wherever you are in the world.
+      <section className=' pb-24 sm:pb-0 bg-CustomVeryLightGray  sm:overflow-hidden '>
+        <div className='container mx-auto sm:px-4 grid grid-cols-1 grid-rows-[auto_auto] sm:grid-cols-[1fr_2fr] sm:grid-rows-1'>
+          <div className='text-center px-4 sm:self-center sm:text-left sm:px-0'>
+            <h1 className='text-5xl text-CustomDarkBlue'>
+              Next generation digital banking
+            </h1>
+            <p className='mt-7 text-CustomGrayishBlue '>
+              Take your financial life online. Your Easybank account will be a
+              one-stop-shop for spending, saving, budgeting, investing, and much
+              more.
             </p>
+            <button className='mt-7 text-CustomWhite font-semibold bg-gradient py-2 px-6 rounded-full hover:opacity-80'>
+              Request Invite
+            </button>
           </div>
-          <div>
-            <Image src={budgetingIcon} alt='' />
-            <h3>Simple Budgeting</h3>
-            <p>
-              See exactly where your money goes each month. Receive
-              notifications when you’re close to hitting your limits.
-            </p>
+          <div className='row-start-1 row-end-2  sm:row-start-auto sm:row-end-auto  sm:relative'>
+            <div className='sm:hidden'>
+              <Image
+                src={mobileBackground}
+                alt=''
+                layout='responsive'
+                priority
+              />
+            </div>
+            <div className='hidden sm:block relative -right-80 -top-16 scale-150 '>
+              <Image
+                src={desktopBackground}
+                alt=''
+                layout='responsive'
+                priority
+              />
+            </div>
           </div>
-          <div>
-            <Image src={onboardingIcon} alt='' />
-            <h3>Fast Onboarding</h3>
-            <p>
-              We don’t do branches. Open your account in minutes online and
-              start taking control of your finances right away.
-            </p>
-          </div>
-          <div>
-            <Image src={apiIcon} alt='' />
-            <h3>Open API</h3>
-            <p>
-              Manage your savings, investments, pension, and much more from one
-              account. Tracking your money has never been easier.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section>
-        <h2>Latest Articles</h2>
-        <div>
-          <div>
-            <Image src={currencyImg} alt='' loading='lazy' placeholder='blur' />
-            <p>By Claire Robinson</p>
-            <h3>Receive money in any currency with no fees</h3>
-            <p>
-              The world is getting smaller and we’re becoming more mobile. So
-              why should you be forced to only receive money in a single …
-            </p>
-          </div>
-          <div>
+          <div className='absolute -top-28  sm:z-0 sm:-right-28 sm:grid sm:grid-cols-2 w-full'>
+            <div></div>
             <Image
-              src={restaurantImg}
-              alt=''
-              loading='lazy'
-              placeholder='blur'
+              src={heroImage}
+              alt='Screen shots of easy bankig app showing the splash screen and account page'
+              priority
+              layout='responsive'
             />
-            <p>By Wilson Hutton</p>
-            <h3>Treat yourself without worrying about money</h3>
-            <p>
-              Our simple budgeting feature allows you to separate out your
-              spending and set realistic limits each month. That means you …
-            </p>
           </div>
-          <div>
-            <Image src={planeImg} alt='' loading='lazy' placeholder='blur' />
-            <p>By Wilson Hutton</p>
-            <h3>Take your Easybank card wherever you go</h3>
-            <p>
-              We want you to enjoy your travels. This is why we don’t charge any
-              fees on purchases while you’re abroad. We’ll even show you …
-            </p>
+        </div>
+      </section>
+      <section className='text-center pb-24 pt-24 bg-CustomLightGrayishBlue sm:text-left '>
+        <div className='container mx-auto px-4'>
+          <h2 className='text-4xl text-CustomDarkBlue'>Why choose Easybank?</h2>
+          <p className='text-CustomGrayishBlue mt-6 pb-8 max-w-sm mx-auto sm:mx-0 sm:max-w-xl'>
+            We leverage Open Banking to turn your bank account into your
+            financial hub. Control your finances like never before.
+          </p>
+          <div className='sm:grid sm:grid-cols-2 sm:gap-20 lg:grid-cols-4'>
+            <div className='pt-8'>
+              <Image src={onlineBankingIcon} alt='' />
+              <h3 className='text-2xl text-CustomDarkBlue mt-4'>
+                Online Banking
+              </h3>
+              <p className='text-CustomGrayishBlue mt-6 max-w-sm mx-auto '>
+                Our modern web and mobile applications allow you to keep track
+                of your finances wherever you are in the world.
+              </p>
+            </div>
+            <div className='pt-8'>
+              <Image src={budgetingIcon} alt='' />
+              <h3 className='text-2xl text-CustomDarkBlue mt-4'>
+                Simple Budgeting
+              </h3>
+              <p className='text-CustomGrayishBlue mt-6 max-w-sm mx-auto'>
+                See exactly where your money goes each month. Receive
+                notifications when you’re close to hitting your limits.
+              </p>
+            </div>
+            <div className='pt-8'>
+              <Image src={onboardingIcon} alt='' />
+              <h3 className='text-2xl text-CustomDarkBlue mt-4'>
+                Fast Onboarding
+              </h3>
+              <p className='text-CustomGrayishBlue mt-6 max-w-sm mx-auto'>
+                We don’t do branches. Open your account in minutes online and
+                start taking control of your finances right away.
+              </p>
+            </div>
+            <div className='pt-8'>
+              <Image src={apiIcon} alt='' />
+              <h3 className='text-2xl text-CustomDarkBlue mt-4'>Open API</h3>
+              <p className='text-CustomGrayishBlue mt-6 max-w-sm mx-auto px-1'>
+                Manage your savings, investments, pension, and much more from
+                one account. Tracking your money has never been easier.
+              </p>
+            </div>
           </div>
-          <div>
-            <Image src={confettiImg} alt='' loading='lazy' placeholder='blur' />
-            <p>By Claire Robinson</p>
-            <h3>Our invite-only Beta accounts are now live!</h3>
-            <p>
-              After a lot of hard work by the whole team, we’re excited to
-              launch our closed beta. It’s easy to request an invite through the
-              site ...
-            </p>
+        </div>
+      </section>
+      <section className='text-center sm:text-left pt-24 bg-CustomVeryLightGray px-4 pb-24'>
+        <div className='container mx-auto sm:px-4'>
+          <h2 className='text-3xl text-CustomDarkBlue mb-8'>Latest Articles</h2>
+          <div className='grid sm:grid-cols-2 sm:gap-20 lg:grid-cols-4'>
+            <div className='bg-CustomWhite grid grid-rows-[.8fr_1fr]'>
+              <Image
+                src={currencyImg}
+                alt=''
+                loading='lazy'
+                placeholder='blur'
+                className='rounded-t'
+                objectFit='cover'
+              />
+              <div className='container mx-auto px-7 pb-10 text-left'>
+                <p className='text-CustomGrayishBlue text-xs pt-4 pb-2'>
+                  By Claire Robinson
+                </p>
+                <h3 className='text-CustomDarkBlue'>
+                  Receive money in any currency with no fees
+                </h3>
+                <p className='text-CustomGrayishBlue text-sm pt-4'>
+                  The world is getting smaller and we’re becoming more mobile.
+                  So why should you be forced to only receive money in a single
+                  …
+                </p>
+              </div>
+            </div>
+            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-[.8fr_1fr]'>
+              <Image
+                src={restaurantImg}
+                alt=''
+                loading='lazy'
+                placeholder='blur'
+                className='rounded-t'
+                objectFit='cover'
+              />
+              <div className='container mx-auto px-7 pb-10 text-left'>
+                <p className='text-CustomGrayishBlue text-xs pt-4 pb-2'>
+                  By Wilson Hutton
+                </p>
+                <h3 className='text-CustomDarkBlue'>
+                  Treat yourself without worrying about money
+                </h3>
+                <p className='text-CustomGrayishBlue text-sm pt-4'>
+                  Our simple budgeting feature allows you to separate out your
+                  spending and set realistic limits each month. That means you …
+                </p>
+              </div>
+            </div>
+            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-[.8fr_1fr]'>
+              <Image
+                src={planeImg}
+                alt=''
+                loading='lazy'
+                placeholder='blur'
+                className='rounded-t'
+                objectFit='cover'
+              />
+              <div className='container mx-auto px-7 pb-10 text-left'>
+                <p className='text-CustomGrayishBlue text-xs pt-4 pb-2'>
+                  By Wilson Hutton
+                </p>
+                <h3 className='text-CustomDarkBlue'>
+                  Take your Easybank card wherever you go
+                </h3>
+                <p className='text-CustomGrayishBlue text-sm pt-4'>
+                  We want you to enjoy your travels. This is why we don’t charge
+                  any fees on purchases while you’re abroad. We’ll even show you
+                  …
+                </p>
+              </div>
+            </div>
+            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-[.8fr_1fr]'>
+              <Image
+                src={confettiImg}
+                alt=''
+                loading='lazy'
+                placeholder='blur'
+                className='rounded-t'
+                objectFit='cover'
+              />
+              <div className='container mx-auto px-7 pb-10 text-left'>
+                <p className='text-CustomGrayishBlue text-xs pt-4 pb-2'>
+                  By Claire Robinson
+                </p>
+                <h3 className='text-CustomDarkBlue'>
+                  Our invite-only Beta accounts are now live!
+                </h3>
+                <p className='text-CustomGrayishBlue text-sm pt-4'>
+                  After a lot of hard work by the whole team, we’re excited to
+                  launch our closed beta. It’s easy to request an invite through
+                  the site ...
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
