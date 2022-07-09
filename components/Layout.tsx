@@ -6,7 +6,7 @@ const Layout: React.FC<{ children: ReactElement }> = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main>{children}</main>
+      <main className='relative overflow-hidden'>{children}</main>
       <Footer />
     </>
   );
