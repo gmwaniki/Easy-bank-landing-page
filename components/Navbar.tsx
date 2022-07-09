@@ -65,9 +65,9 @@ const Navbar = () => {
           onClick={handleClick}
         >
           {showMenu ? (
-            <Image src={closeIcon} alt='' />
+            <Image src={closeIcon} alt='close Icon' />
           ) : (
-            <Image src={hamburgerIcon} alt='' />
+            <Image src={hamburgerIcon} alt='Menu Icon' />
           )}
         </button>
       </div>
