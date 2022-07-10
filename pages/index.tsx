@@ -1,25 +1,13 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
-
-import heroImage from '../images/image-mockups.png';
-import mobileBackground from '../images/bg-intro-mobile.svg';
-import onlineBankingIcon from '../images/icon-online.svg';
-import budgetingIcon from '../images/icon-budgeting.svg';
-import onboardingIcon from '../images/icon-onboarding.svg';
-import apiIcon from '../images/icon-api.svg';
-import currencyImg from '../images/image-currency.jpg';
-import restaurantImg from '../images/image-restaurant.jpg';
-import planeImg from '../images/image-plane.jpg';
-import confettiImg from '../images/image-confetti.jpg';
-import desktopBackground from '../images/bg-intro-desktop.svg';
-
+import Link from 'next/link';
 const Home: NextPage = () => {
   return (
     <>
       <section className=' pb-24 sm:pb-0 bg-CustomVeryLightGray  sm:overflow-hidden '>
         <div className='container mx-auto sm:px-4 grid grid-cols-1 grid-rows-[auto_auto] sm:grid-cols-[1fr_2fr] sm:grid-rows-1'>
           <div className='text-center px-4 sm:self-center sm:text-left sm:px-0'>
-            <h1 className='text-5xl text-CustomDarkBlue'>
+            <h1 className='text-4xl text-CustomDarkBlue lg:text-5xl'>
               Next generation digital banking
             </h1>
             <p className='mt-7 text-CustomGrayishBlue '>
@@ -32,30 +20,37 @@ const Home: NextPage = () => {
             </button>
           </div>
           <div className='row-start-1 row-end-2  sm:row-start-auto sm:row-end-auto  sm:relative'>
-            <div className='sm:hidden'>
+            <div className='sm:hidden relative w-full h-[25rem]'>
               <Image
-                src={mobileBackground}
+                src='/images/bg-intro-mobile.svg'
                 alt=''
-                layout='responsive'
+                layout='fill'
                 priority
+                objectFit='cover'
               />
             </div>
-            <div className='hidden sm:block relative -right-80 -top-16 scale-150 '>
+            <div className='hidden sm:block relative -right-[26rem] -top-[4.5rem] overflow-hidden scale-150 w-full h-[40rem]'>
               <Image
-                src={desktopBackground}
+                src='/images/bg-intro-desktop.svg'
                 alt=''
-                layout='responsive'
+                layout='fill'
+                objectFit='cover'
                 priority
               />
             </div>
           </div>
-          <div className='absolute -top-28  sm:z-0 sm:-right-28 sm:grid sm:grid-cols-2 w-full'>
+          <div
+            className='absolute -z-0 -top-36 left-1/2 -translate-x-1/2 w-11/12 pointer-events-none   h-[36rem] sm:z-0 sm:-right-28 sm:grid sm:grid-cols-2  sm:translate-x-0 sm:h-[50rem]
+           sm:w-full sm:left-[35%] sm:-top-20
+          '
+          >
             <div></div>
             <Image
-              src={heroImage}
+              src='/images/image-mockups.png'
               alt='Screen shots of easy bankig app showing the splash screen and account page'
               priority
-              layout='responsive'
+              layout='fill'
+              objectFit='contain'
             />
           </div>
         </div>
@@ -69,7 +64,13 @@ const Home: NextPage = () => {
           </p>
           <div className='sm:grid sm:grid-cols-2 sm:gap-20 lg:grid-cols-4'>
             <div className='pt-8'>
-              <Image src={onlineBankingIcon} alt='' />
+              <Image
+                src='/images/icon-online.svg'
+                alt=''
+                width={'72px'}
+                height={'72px'}
+                loading='lazy'
+              />
               <h3 className='text-2xl text-CustomDarkBlue mt-4'>
                 Online Banking
               </h3>
@@ -79,7 +80,13 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className='pt-8'>
-              <Image src={budgetingIcon} alt='' />
+              <Image
+                src='/images/icon-budgeting.svg'
+                alt=''
+                width={'72px'}
+                height={'72px'}
+                loading='lazy'
+              />
               <h3 className='text-2xl text-CustomDarkBlue mt-4'>
                 Simple Budgeting
               </h3>
@@ -89,7 +96,13 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className='pt-8'>
-              <Image src={onboardingIcon} alt='' />
+              <Image
+                src='/images/icon-onboarding.svg'
+                alt=''
+                width={'72px'}
+                height={'72px'}
+                loading='lazy'
+              />
               <h3 className='text-2xl text-CustomDarkBlue mt-4'>
                 Fast Onboarding
               </h3>
@@ -99,7 +112,13 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className='pt-8'>
-              <Image src={apiIcon} alt='' />
+              <Image
+                src='/images/icon-api.svg'
+                alt=''
+                width={'72px'}
+                height={'72px'}
+                loading='lazy'
+              />
               <h3 className='text-2xl text-CustomDarkBlue mt-4'>Open API</h3>
               <p className='text-CustomGrayishBlue mt-6 max-w-sm mx-auto px-1'>
                 Manage your savings, investments, pension, and much more from
@@ -112,23 +131,27 @@ const Home: NextPage = () => {
       <section className='text-center sm:text-left pt-24 bg-CustomVeryLightGray px-4 pb-24'>
         <div className='container mx-auto sm:px-4'>
           <h2 className='text-3xl text-CustomDarkBlue mb-8'>Latest Articles</h2>
-          <div className='grid sm:grid-cols-2 sm:gap-20 lg:grid-cols-4'>
-            <div className='bg-CustomWhite grid grid-rows-[.8fr_1fr]'>
-              <Image
-                src={currencyImg}
-                alt=''
-                loading='lazy'
-                placeholder='blur'
-                className='rounded-t'
-                objectFit='cover'
-              />
+          <div className='grid sm:grid-cols-2 sm:gap-7 lg:grid-cols-4'>
+            <div className='bg-CustomWhite grid grid-rows-2'>
+              <div className='relative'>
+                <Image
+                  src='/images/image-currency.jpg'
+                  alt=''
+                  loading='lazy'
+                  className='rounded-t'
+                  layout='fill'
+                  objectFit='cover'
+                />
+              </div>
               <div className='container mx-auto px-7 pb-10 text-left'>
                 <p className='text-CustomGrayishBlue text-xs pt-4 pb-2'>
                   By Claire Robinson
                 </p>
-                <h3 className='text-CustomDarkBlue'>
-                  Receive money in any currency with no fees
-                </h3>
+                <Link href='/'>
+                  <a className='text-CustomDarkBlue transition-colors hover:text-CustomLimeGreen'>
+                    Receive money in any currency with no fees
+                  </a>
+                </Link>
                 <p className='text-CustomGrayishBlue text-sm pt-4'>
                   The world is getting smaller and we’re becoming more mobile.
                   So why should you be forced to only receive money in a single
@@ -136,71 +159,82 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-[.8fr_1fr]'>
-              <Image
-                src={restaurantImg}
-                alt=''
-                loading='lazy'
-                placeholder='blur'
-                className='rounded-t'
-                objectFit='cover'
-              />
+            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-2'>
+              <div className='relative'>
+                <Image
+                  src='/images/image-restaurant.jpg'
+                  alt=''
+                  loading='lazy'
+                  layout='fill'
+                  className='rounded-t'
+                  objectFit='cover'
+                />
+              </div>
               <div className='container mx-auto px-7 pb-10 text-left'>
                 <p className='text-CustomGrayishBlue text-xs pt-4 pb-2'>
                   By Wilson Hutton
                 </p>
-                <h3 className='text-CustomDarkBlue'>
-                  Treat yourself without worrying about money
-                </h3>
+                <Link href='/'>
+                  <a className='text-CustomDarkBlue transition-colors hover:text-CustomLimeGreen'>
+                    Treat yourself without worrying about money
+                  </a>
+                </Link>
                 <p className='text-CustomGrayishBlue text-sm pt-4'>
                   Our simple budgeting feature allows you to separate out your
                   spending and set realistic limits each month. That means you …
                 </p>
               </div>
             </div>
-            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-[.8fr_1fr]'>
-              <Image
-                src={planeImg}
-                alt=''
-                loading='lazy'
-                placeholder='blur'
-                className='rounded-t'
-                objectFit='cover'
-              />
+            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-2'>
+              <div className='relative'>
+                <Image
+                  src='/images/image-plane.jpg'
+                  alt=''
+                  loading='lazy'
+                  layout='fill'
+                  className='rounded-t'
+                  objectFit='cover'
+                />
+              </div>
               <div className='container mx-auto px-7 pb-10 text-left'>
                 <p className='text-CustomGrayishBlue text-xs pt-4 pb-2'>
                   By Wilson Hutton
                 </p>
-                <h3 className='text-CustomDarkBlue'>
-                  Take your Easybank card wherever you go
-                </h3>
+                <Link href='/'>
+                  <a className='text-CustomDarkBlue transition-colors hover:text-CustomLimeGreen'>
+                    Take your Easybank card wherever you go
+                  </a>
+                </Link>
                 <p className='text-CustomGrayishBlue text-sm pt-4'>
                   We want you to enjoy your travels. This is why we don’t charge
                   any fees on purchases while you’re abroad. We’ll even show you
-                  …
                 </p>
               </div>
             </div>
-            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-[.8fr_1fr]'>
-              <Image
-                src={confettiImg}
-                alt=''
-                loading='lazy'
-                placeholder='blur'
-                className='rounded-t'
-                objectFit='cover'
-              />
+            <div className='bg-CustomWhite mt-8 sm:mt-0 grid grid-rows-2 h-full'>
+              <div className='relative'>
+                <Image
+                  src='/images/image-confetti.jpg'
+                  alt=''
+                  loading='lazy'
+                  layout='fill'
+                  className='rounded-t'
+                  objectFit='cover'
+                />
+              </div>
               <div className='container mx-auto px-7 pb-10 text-left'>
                 <p className='text-CustomGrayishBlue text-xs pt-4 pb-2'>
                   By Claire Robinson
                 </p>
-                <h3 className='text-CustomDarkBlue'>
-                  Our invite-only Beta accounts are now live!
-                </h3>
+                <Link href='/'>
+                  <a className='text-CustomDarkBlue transition-colors hover:text-CustomLimeGreen'>
+                    Our invite-only Beta accounts are now live!
+                  </a>
+                </Link>
                 <p className='text-CustomGrayishBlue text-sm pt-4'>
                   After a lot of hard work by the whole team, we’re excited to
                   launch our closed beta. It’s easy to request an invite through
-                  the site ...
+                  the site …
                 </p>
               </div>
             </div>
