@@ -65,7 +65,11 @@ const Navbar = () => {
         <button className='hidden sm:inline-block text-CustomWhite font-semibold bg-gradient py-2 px-4 rounded-full hover:opacity-80'>
           Request Invite
         </button>
-        <button className='sm:hidden justify-self-end ' onClick={handleClick}>
+        <button
+          className='sm:hidden justify-self-end '
+          onClick={handleClick}
+          aria-label={`${showMenu ? 'Close menu' : 'Open menu'}`}
+        >
           {showMenu ? (
             <div className='relative h-7 w-7'>
               <Image
