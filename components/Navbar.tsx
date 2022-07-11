@@ -66,28 +66,24 @@ const Navbar = () => {
           Request Invite
         </button>
         <button
-          className='sm:hidden justify-self-end '
+          className='sm:hidden justify-self-end relative h-7 w-7'
           onClick={handleClick}
           aria-label={`${showMenu ? 'Close menu' : 'Open menu'}`}
         >
           {showMenu ? (
-            <div className='relative h-7 w-7'>
-              <Image
-                src='/images/icon-close.svg'
-                alt='close Icon'
-                layout='fill'
-                objectFit='contain'
-              />
-            </div>
+            <Image
+              src='/images/icon-close.svg'
+              alt='close Icon'
+              layout='fill'
+              objectFit='contain'
+            />
           ) : (
-            <div className='relative h-7 w-7'>
-              <Image
-                src='/images/icon-hamburger.svg'
-                alt=''
-                layout='fill'
-                objectFit='contain'
-              />
-            </div>
+            <Image
+              src='/images/icon-hamburger.svg'
+              alt=''
+              layout='fill'
+              objectFit='contain'
+            />
           )}
         </button>
       </div>
