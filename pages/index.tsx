@@ -25,7 +25,6 @@ const Home: NextPage = () => {
                 src='/images/bg-intro-mobile.svg'
                 alt=''
                 layout='fill'
-                priority
                 objectFit='cover'
               />
             </div>
@@ -35,7 +34,6 @@ const Home: NextPage = () => {
                 alt=''
                 layout='fill'
                 objectFit='cover'
-                priority
               />
             </div>
           </div>
@@ -48,7 +46,6 @@ const Home: NextPage = () => {
             <Image
               src='/images/image-mockups.png'
               alt='Screen shots of easy bankig app showing the splash screen and account page'
-              priority
               layout='fill'
               objectFit='contain'
             />
@@ -69,7 +66,6 @@ const Home: NextPage = () => {
                 alt=''
                 width={'72px'}
                 height={'72px'}
-                loading='lazy'
               />
               <h3 className='text-2xl text-CustomDarkBlue mt-4'>
                 Online Banking
@@ -85,7 +81,6 @@ const Home: NextPage = () => {
                 alt=''
                 width={'72px'}
                 height={'72px'}
-                loading='lazy'
               />
               <h3 className='text-2xl text-CustomDarkBlue mt-4'>
                 Simple Budgeting
@@ -101,7 +96,6 @@ const Home: NextPage = () => {
                 alt=''
                 width={'72px'}
                 height={'72px'}
-                loading='lazy'
               />
               <h3 className='text-2xl text-CustomDarkBlue mt-4'>
                 Fast Onboarding
@@ -117,7 +111,6 @@ const Home: NextPage = () => {
                 alt=''
                 width={'72px'}
                 height={'72px'}
-                loading='lazy'
               />
               <h3 className='text-2xl text-CustomDarkBlue mt-4'>Open API</h3>
               <p className='text-CustomGrayishBlue mt-6 max-w-sm mx-auto px-1'>
@@ -137,7 +130,6 @@ const Home: NextPage = () => {
                 <Image
                   src='/images/image-currency.jpg'
                   alt=''
-                  loading='lazy'
                   className='rounded-t'
                   layout='fill'
                   objectFit='cover'
@@ -164,7 +156,6 @@ const Home: NextPage = () => {
                 <Image
                   src='/images/image-restaurant.jpg'
                   alt=''
-                  loading='lazy'
                   layout='fill'
                   className='rounded-t'
                   objectFit='cover'
@@ -190,7 +181,6 @@ const Home: NextPage = () => {
                 <Image
                   src='/images/image-plane.jpg'
                   alt=''
-                  loading='lazy'
                   layout='fill'
                   className='rounded-t'
                   objectFit='cover'
@@ -216,7 +206,6 @@ const Home: NextPage = () => {
                 <Image
                   src='/images/image-confetti.jpg'
                   alt=''
-                  loading='lazy'
                   layout='fill'
                   className='rounded-t'
                   objectFit='cover'
