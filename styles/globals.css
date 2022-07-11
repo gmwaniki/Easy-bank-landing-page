@@ -7,6 +7,7 @@
   font-family: 'Public Sans';
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: local(''),
     url('../public/fonts/public-sans-v13-latin-300.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -17,6 +18,7 @@
   font-family: 'Public Sans';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(''),
     url('../public/fonts/public-sans-v13-latin-regular.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -27,6 +29,7 @@
   font-family: 'Public Sans';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(''),
     url('../public/fonts/public-sans-v13-latin-700.woff2') format('woff2'),
     /* Chrome 26+, Opera 23+, Firefox 39+ */
