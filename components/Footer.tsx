@@ -1,10 +1,4 @@
 import Image from 'next/image';
-import facebookLogo from '../images/icon-facebook.svg';
-import youtubeIcon from '../images/icon-youtube.svg';
-import twitterIcon from '../images/icon-twitter.svg';
-import pinterestIcon from '../images/icon-pinterest.svg';
-import instagramIcon from '../images/icon-instagram.svg';
-import easybankLogo from '../images/logo-dark.svg';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -16,7 +10,6 @@ const Footer = () => {
             <Image
               src='/images/logo-dark.svg'
               alt='easybank logo'
-              priority
               layout='fill'
               objectFit='contain'
             />

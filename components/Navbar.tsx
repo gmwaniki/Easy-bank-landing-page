@@ -16,7 +16,6 @@ const Navbar = () => {
               <Image
                 src='/images/logo.svg'
                 alt='easybank logo'
-                priority
                 layout='fill'
                 objectFit='contain'
               />
